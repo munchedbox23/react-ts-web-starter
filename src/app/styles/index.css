@@ -1,0 +1,30 @@
+@import "reset";
+@import "variables/global";
+
+* {
+  scroll-behavior: smooth;
+  list-style: none;
+  scroll-padding-top: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Noto Sans", sans-serif;
+  outline-color: #0af;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* ширина scrollbar */
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: var(--borderRadius-16); /* закругление */
+  background-color: var(--palette-blue75);
+}
+
+body {
+  font-weight: 400;
+  min-height: 100vh;
+  position: relative;
+  color: var(--black---black);
+  background: var(--steel-gray---60);
+  font-family: var(--font-family);
+}

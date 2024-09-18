@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --mode development --env mode=development --open",
+    "dev:dev:server": "json-server --watch ./json-server/db.json -p 8000",
     "dev:server": "json-server --watch ./json-server/db.json -p 8000",
     "build:prod": "webpack  --env mode=production",
     "build:dev": "webpack  --env mode=development",
@@ -67,14 +68,17 @@
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2",
+    "typescript-plugin-css-modules": "^5.1.0",
     "webpack": "^5.94.0",
     "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"
   },
   "dependencies": {
+    "framer-motion": "^11.5.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-redux": "^9.1.2",
     "react-router-dom": "^6.26.2"
   }
 }
