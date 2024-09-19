@@ -11,7 +11,11 @@ export const PhotoCard: FC<TPhotoCard> = ({ photo }) => {
   return (
     <Card
       data-cy="photo-card"
-      sx={{ maxWidth: "200px", margin: "0 10px 25px 0 !important" }}
+      sx={{
+        maxWidth: "200px",
+        cursor: "pointer",
+        margin: "0 10px 25px 0 !important",
+      }}
     >
       <Stack
         direction="column"

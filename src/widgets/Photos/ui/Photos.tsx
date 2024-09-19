@@ -46,7 +46,7 @@ export const Photos = memo(() => {
           textAlign: "left",
           fontSize: "32px",
           fontWeight: 700,
-          marginLeft: "66px",
+          marginLeft: { xs: "20px", md: "66px" },
         }}
       >
         Photos

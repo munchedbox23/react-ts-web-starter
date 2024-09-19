@@ -3,6 +3,7 @@ import { FC, PropsWithChildren } from "react";
 import styles from "./PhotoList.module.css";
 import { Box, Stack, Typography } from "@mui/material";
 import { PhotoCard } from "../PhotoCard/PhotoCard";
+import { PhotoCardSkeleton } from "../PhotoSkeleton/PhotoSkeleton";
 
 type TPhotosListProps = {
   photos: IPhoto[];
@@ -30,7 +31,9 @@ export const PhotosList: FC<PropsWithChildren<TPhotosListProps>> = ({
         sx={{ marginRight: "-10px" }}
       >
         {isLoading && !photos.length
-          ? Array.from(new Array(limit)).map((_, index) => <div key={index} />)
+          ? Array.from(new Array(limit)).map((_, index) => (
+              <PhotoCardSkeleton key={index} />
+            ))
           : photos
               .slice(start, start + limit)
               .map((item) => <PhotoCard photo={item} key={item.id} />)}
@@ -41,7 +44,7 @@ export const PhotosList: FC<PropsWithChildren<TPhotosListProps>> = ({
             variant="subtitle1"
             sx={{ fontSize: "24px", fontWeight: 600, textAlign: "center" }}
           >
-            К сожалению, сервис не смог найти ни одного объявления
+            К сожалению, сервис не смог найти ни одного фото
           </Typography>
         </Box>
       )}

@@ -3,6 +3,7 @@ import { NotFoundPage } from "@/pages/NotFoundPage";
 import { MainLayout } from "@/app/layouts/MainLayout";
 import { PhotosPage } from "@/pages/PhotosPage";
 import { appRoutes } from "@/shared/const/router";
+import { TodosPage } from "@/pages/TodosPage";
 
 export const router = createBrowserRouter([
   { path: appRoutes.main, element: <Navigate to={appRoutes.photos} replace /> },
@@ -13,6 +14,16 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <PhotosPage />,
+      },
+    ],
+  },
+  {
+    path: appRoutes.todos,
+    element: <MainLayout />,
+    children: [
+      {
+        index: true,
+        element: <TodosPage />,
       },
     ],
   },

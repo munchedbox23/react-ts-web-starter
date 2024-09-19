@@ -9,6 +9,6 @@ export const API: IApi = {
   jsonServerUrl: "http://localhost:8000",
   endpoints: {
     photos: "/photos",
-    orders: "/todos",
+    todos: "/todos",
   },
 };
