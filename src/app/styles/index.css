@@ -39,8 +39,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: var(--borderRadius-16); /* закругление */
-  background-color: var(--palette-blue75);
+  border-radius: 16px; /* закругление */
+  background-color: #b2def6;
 }
 
 body {

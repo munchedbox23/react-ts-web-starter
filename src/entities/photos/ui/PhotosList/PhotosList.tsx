@@ -8,6 +8,8 @@ type TPhotosListProps = {
   photos: IPhoto[];
   isLoading: boolean;
   isError: boolean;
+  limit: number;
+  start: number;
 };
 
 export const PhotosList: FC<PropsWithChildren<TPhotosListProps>> = ({
@@ -15,6 +17,8 @@ export const PhotosList: FC<PropsWithChildren<TPhotosListProps>> = ({
   isLoading,
   isError,
   children,
+  start,
+  limit,
 }) => {
   return (
     <article className={styles.photos}>
@@ -26,9 +30,9 @@ export const PhotosList: FC<PropsWithChildren<TPhotosListProps>> = ({
         sx={{ marginRight: "-10px" }}
       >
         {isLoading && !photos.length
-          ? Array.from(new Array(10)).map((_, index) => <div key={index} />)
+          ? Array.from(new Array(limit)).map((_, index) => <div key={index} />)
           : photos
-              .slice(0, 20)
+              .slice(start, start + limit)
               .map((item) => <PhotoCard photo={item} key={item.id} />)}
       </Stack>
       {(isError || !photos.length) && (

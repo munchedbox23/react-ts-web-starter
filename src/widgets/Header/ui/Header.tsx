@@ -37,7 +37,7 @@ export const Header = () => {
   };
 
   return (
-    <AppBar position="sticky" sx={{ top: 0, maxHeight: "70px" }}>
+    <AppBar position="sticky" sx={{ maxHeight: "70px" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
