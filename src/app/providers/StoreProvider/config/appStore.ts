@@ -3,11 +3,16 @@ import { useDispatch, useSelector, TypedUseSelectorHook } from "react-redux";
 import { rootReducer } from "./rootReducer";
 import { photosApi } from "@/entities/photos";
 import { todoApi } from "@/entities/todo/api/todoApi";
+import { editTodoApi } from "@/features/EditTodoItem/api/editTodoApi";
 
 export const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(photosApi.middleware, todoApi.middleware),
+    getDefaultMiddleware().concat(
+      photosApi.middleware,
+      todoApi.middleware,
+      editTodoApi.middleware
+    ),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

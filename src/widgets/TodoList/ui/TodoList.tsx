@@ -7,6 +7,7 @@ import {
   TodoItemSkeleton,
 } from "@/entities/todo";
 import { Button } from "@mui/material";
+import { EditTodoItem } from "@/features/EditTodoItem";
 
 export const TodoList: FC<PropsWithChildren> = ({ children }) => {
   const { data: todos = [], isLoading, isError } = useGetAllTodosQuery();
@@ -25,7 +26,13 @@ export const TodoList: FC<PropsWithChildren> = ({ children }) => {
             ))
           : todos
               .slice(0, visibleTodos)
-              .map((item) => <TodoItem todo={item} key={item.id} />)}
+              .map((item) => (
+                <TodoItem
+                  todo={item}
+                  key={item.id}
+                  todoOptions={<EditTodoItem />}
+                />
+              ))}
         {visibleTodos < todos.length && (
           <Button onClick={showMoreUsers}>Показать больше</Button>
         )}
@@ -36,7 +43,7 @@ export const TodoList: FC<PropsWithChildren> = ({ children }) => {
             variant="subtitle1"
             sx={{ fontSize: "24px", fontWeight: 600, textAlign: "center" }}
           >
-            К сожалению, сервис не смог найти ни одного фото
+            К сожалению, сервис не смог найти ни одного todo
           </Typography>
         </Box>
       )}

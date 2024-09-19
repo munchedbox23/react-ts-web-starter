@@ -12,8 +12,9 @@ export const TodoItem: FC<TTodoCardProps> = ({ todo, todoOptions }) => {
     <Card
       data-cy="todo-card"
       sx={{
-        width: '100%',
+        width: "100%",
         margin: "0 10px 25px 0 !important",
+        position: "relative",
         boxShadow: "4px 4px 8px 0px rgba(34, 60, 80, 0.2)",
       }}
     >
