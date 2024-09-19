@@ -8,7 +8,7 @@ export const API: IApi = {
   baseUrl: "https://jsonplaceholder.typicode.com",
   jsonServerUrl: "http://localhost:8000",
   endpoints: {
-    posts: "/posts",
+    photos: "/photos",
     orders: "/todos",
   },
 };

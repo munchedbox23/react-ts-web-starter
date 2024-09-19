@@ -19,15 +19,13 @@ const pages = [
     pageRoute: appRoutes.todos,
   },
   {
-    pageName: "Posts",
-    pageRoute: appRoutes.posts,
+    pageName: "Photos",
+    pageRoute: appRoutes.photos,
   },
 ];
 
 export const Header = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
+  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const navigate = useNavigate();
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -37,6 +35,7 @@ export const Header = () => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
   return (
     <AppBar position="sticky" sx={{ top: 0, maxHeight: "70px" }}>
       <Container maxWidth="xl">
@@ -52,7 +51,6 @@ export const Header = () => {
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
-
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
@@ -88,7 +86,13 @@ export const Header = () => {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.pageName} onClick={handleCloseNavMenu}>
+                <MenuItem
+                  key={page.pageName}
+                  onClick={() => {
+                    handleCloseNavMenu();
+                    navigate(page.pageRoute);
+                  }}
+                >
                   <Typography sx={{ textAlign: "center", fontSize: "16px" }}>
                     {page.pageName}
                   </Typography>

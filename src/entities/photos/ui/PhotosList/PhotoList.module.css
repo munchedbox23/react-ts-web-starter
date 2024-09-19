@@ -1,0 +1,7 @@
+.photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.6rem;
+  flex: 1 1 auto;
+}

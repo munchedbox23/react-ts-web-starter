@@ -1,13 +1,13 @@
 export enum AppRoutes {
   MAIN = "main",
-  POSTS = "posts",
+  PHOTOS = "photos",
   TODOS = "todos",
   NOT_FOUND = "not_found",
 }
 
 export const appRoutes: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: "/",
-  [AppRoutes.POSTS]: "/posts",
+  [AppRoutes.PHOTOS]: "/photos",
   [AppRoutes.TODOS]: "/todos",
   [AppRoutes.NOT_FOUND]: "*",
 };
