@@ -13,8 +13,8 @@
     "test:e2e": "cypress open",
     "sb": "storybook dev -p 6006 -c ./config/storybook",
     "storybook:build": "storybook build -c ./config/storybook",
-    "lint": "eslint . --ext .ts,.tsx",
-    "lint:fix": "eslint . --ext .ts,.tsx --fix"
+    "lint:ts": "eslint \"**/*.{ts,tsx}\"",
+    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix"
   },
   "repository": {
     "type": "git",
@@ -82,6 +82,7 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "@eslint/eslintrc": "^3.1.0",
     "@mui/material": "^6.1.1",
     "@mui/styled-engine-sc": "^6.1.1",
     "framer-motion": "^11.5.4",
