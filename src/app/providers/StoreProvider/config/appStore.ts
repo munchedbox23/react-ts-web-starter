@@ -4,6 +4,7 @@ import { rootReducer } from "./rootReducer";
 import { photosApi } from "@/entities/photos";
 import { todoApi } from "@/entities/todo/api/todoApi";
 import { editTodoApi } from "@/features/EditTodoItem/api/editTodoApi";
+import { addTodoApi } from "@/features/AddTodoItem/api/addTodoApi";
 
 export const store = configureStore({
   reducer: rootReducer,
@@ -11,7 +12,8 @@ export const store = configureStore({
     getDefaultMiddleware().concat(
       photosApi.middleware,
       todoApi.middleware,
-      editTodoApi.middleware
+      editTodoApi.middleware,
+      addTodoApi.middleware
     ),
 });
 

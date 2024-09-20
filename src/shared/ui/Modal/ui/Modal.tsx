@@ -32,7 +32,7 @@ export const Modal: FC<PropsWithChildren<TModalProps>> = memo(
 
     return createPortal(
       <Stack
-        direction="row"
+        direction="column"
         sx={{
           justifyContent: "center",
           alignItems: "center",
@@ -51,13 +51,13 @@ export const Modal: FC<PropsWithChildren<TModalProps>> = memo(
           direction="column"
           sx={{
             justifyContent: "center",
-            alignItems: "flex-start",
+            alignItems: "center",
             position: "relative",
             zIndex: 30,
             textAlign: "center",
-            width: "40%",
-            minHeight: "30rem",
-            maxHeight: "55rem",
+            width: { xs: "85%", md: "40%" },
+            minHeight: { xs: "15rem", md: "20rem" },
+            maxHeight: { xs: "30rem", md: "55rem" },
             borderRadius: "1.5rem",
             backgroundColor: "rgb(241 245 249)",
           }}

@@ -30,7 +30,7 @@ export const TodoList: FC<PropsWithChildren> = ({ children }) => {
                 <TodoItem
                   todo={item}
                   key={item.id}
-                  todoOptions={<EditTodoItem />}
+                  todoOptions={<EditTodoItem id={item.id} />}
                 />
               ))}
         {visibleTodos < todos.length && (
