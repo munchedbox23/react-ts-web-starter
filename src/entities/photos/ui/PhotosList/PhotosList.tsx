@@ -29,6 +29,7 @@ export const PhotosList: FC<PropsWithChildren<TPhotosListProps>> = ({
         justifyContent="center"
         flexWrap="wrap"
         sx={{ marginRight: "-10px" }}
+        data-testId="PhotoList"
       >
         {isLoading && !photos.length
           ? Array.from(new Array(limit)).map((_, index) => (

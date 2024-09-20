@@ -10,7 +10,7 @@ type TPhotoCard = {
 export const PhotoCard: FC<TPhotoCard> = ({ photo }) => {
   return (
     <Card
-      data-cy="photo-card"
+      data-testId="PhotoItem"
       sx={{
         maxWidth: "200px",
         cursor: "pointer",
