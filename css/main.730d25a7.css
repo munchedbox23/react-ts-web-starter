@@ -420,25 +420,25 @@ h6 {
 
 @font-face {
   font-family: "Noto Sans";
-  src: url(/react-ts-web-starter/244813b0774c4a4f14a6.woff) format("woff");
+  src: url(../244813b0774c4a4f14a6.woff) format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Noto Sans";
-  src: url(/react-ts-web-starter/12d2755ac5cd5c7790bd.woff) format("woff");
+  src: url(../12d2755ac5cd5c7790bd.woff) format("woff");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Droid Sans";
-  src: url(/react-ts-web-starter/6509cf43581d63eba297.ttf) format("ttf");
+  src: url(../6509cf43581d63eba297.ttf) format("ttf");
 }
 
 @font-face {
   font-family: "Segoe UI";
-  src: url(/react-ts-web-starter/45472284dc36b2486ce2.ttf) format("ttf");
+  src: url(../45472284dc36b2486ce2.ttf) format("ttf");
 }
 
 * {
@@ -470,4 +470,4 @@ body {
 }
 
 
-/*# sourceMappingURL=main.7d240245.css.map*/
+/*# sourceMappingURL=main.730d25a7.css.map*/
