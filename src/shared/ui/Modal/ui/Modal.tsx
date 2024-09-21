@@ -1,5 +1,5 @@
 import { createPortal } from "react-dom";
-import { FC, PropsWithChildren, memo } from "react";
+import React, { FC, PropsWithChildren, memo } from "react";
 import Stack from "@mui/material/Stack";
 import styles from "./Modal.module.css";
 import { Typography } from "@mui/material";

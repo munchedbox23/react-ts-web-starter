@@ -13,7 +13,8 @@
     "plugin:@conarti/feature-sliced/recommended",
     "plugin:jsx-a11y/recommended",
     "@feature-sliced",
-    "@feature-sliced/eslint-config/rules/import-order/experimental"
+    "@feature-sliced/eslint-config/rules/import-order/experimental",
+    "plugin:storybook/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -23,7 +24,12 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier", "jsx-a11y"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "jsx-a11y"
+  ],
   "settings": {
     "react": {
       "version": "999.999.999"
@@ -33,7 +39,9 @@
     "__IS_DEV__": true
   },
   "rules": {
-    "prettier/prettier": ["error"],
+    "prettier/prettier": [
+      "error"
+    ],
     "react/function-component-definition": [
       2,
       {
